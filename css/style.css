@@ -1,0 +1,110 @@
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#hivelogo {
+  width: 100%;
+  margin-top: 5%;
+}
+
+#preview {
+  width: 12%;
+  cursor: pointer;
+
+}
+
+#previewplay {
+  width: 12%;
+  cursor: pointer;
+}
+
+#previewpause {
+  width: 12%;
+  cursor: pointer;
+}
+
+#logo {
+  width: 100%;
+  margin-top: 45%;
+}
+
+#logo2 {
+  width: 70%;
+  margin-top: 20%;
+  margin-left: 10px;
+}
+
+#logo3 {
+  width: 78%;
+  margin-top: 20%;
+  margin-left: 10px;
+
+}
+
+.dragme{
+    position:relative;
+   /* width: 200px;
+    height: 180px;*/
+    cursor: move;
+}
+
+#draggable {
+  margin-top: 20px;
+}
+
+#footer{
+    border-radius: 25px;
+    background-color: #422fe9;
+    height:6%;
+  }
+
+#bio {
+  font-family: 'VT323', monospace;
+  margin-top: 1px;
+  margin-left: 2%;
+  font-size: 25px;
+  color: blue;
+  background: none;
+  border-radius: 25px;
+  border: solid blue;
+  background-color: white;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#bioW {
+  font-family: 'VT323', monospace;
+  margin-top: 1px;
+  margin-left: 2%;
+  font-size: 25px;
+  color: blue;
+  background: none;
+  border-radius: 25px;
+  border: solid blue;
+  background-color: white;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#song {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: blue;
+}
+
+#btn {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  color: blue;
+}
+
+#closebtn {
+  border-radius: 25px;
+  margin-left: 78%;
+  margin-top: 2%;
+}

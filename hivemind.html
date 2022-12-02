@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>hivemind DAO ‧͙⁺˚*･༓</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="col-sm-12">
+        <div class="col-sm-2">
+          <img id="hivelogo" src="img/HIVE2.png">
+        </div>
+
+        <div class="col-sm-5 col-sm-offset-4">
+          <h1 id="song">Song - Artist
+            <img id="preview" src="img/previous.png">
+            <img id="previewplay" src="img/play.png">
+            <img id="previewpause" src="img/pause.png">
+            <img id="preview" src="img/play.png">
+        </h1>
+        </div>
+
+        <div class="col-sm-1">
+          <img id="logo" src="img/logo.png"><br>
+          <a href="https://twitter.com/hivemind_DAO" target="blank"><img id="logo2" src="img/twitter.jpg"></a><br>
+          <a href="https://www.instagram.com/hivemind_dao/" target="blank"><img id="logo3" src="img/insta.jpg"></a>
+        </div>
+      </div>
+
+    <div id="radio" class="dragme"></div>
+
+      <div class="col-sm-2">
+        <div id="draggable" class="dragme">
+          <img id="imagen1" src="img/radiofolder02.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
+        </div>
+
+        <div id="draggable" class="dragme">
+          <img id="imagen" src="img/folder01.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
+        </div>
+
+        <div id="draggable" class="dragme">
+          <img id="imagen" src="img/team.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
+        </div>
+
+      </div>
+
+
+      <div id="footer" class="fixed-bottom">
+        <button  id="bio" type="button">&nbsphivemind&nbsp<3&nbsp</button>
+        <button  id="bioW" type="button">&nbspconnect Wallet&nbsp</button>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+     var audio = new Audio('radio/song.mp3');
+
+      document.getElementById("previewplay").onclick = function() {
+        audio.play();
+      }
+
+      document.getElementById("previewpause").onclick = function() {
+        audio.pause();
+      }
+
+      document.getElementById("imagen1").ondblclick = function() {
+        var div = document.createElement("div");
+        div.id="btn";
+        div.style.width = "40%";
+        div.style.height = "40%";
+        div.className = "dragme";
+        div.style.background = "white";
+        div.style.borderRadius = "25px";
+        div.style.border = "solid blue";
+        div.style.color = "blue";
+        div.innerHTML = "&nbsp&nbspRadio";
+        div.style.margin = "20%";
+        div.style.zIndex = "99";
+        div.style.position = "fixed";
+        document.getElementById('radio').appendChild(div);
+
+        var close = document.createElement("button");
+        close.type = "button";
+        close.id="closebtn";
+        close.textContent = "X";
+        close.onclick = function () {
+          document.getElementById("btn").remove();
+          document.getElementById("closebtn").remove();
+        }
+        document.getElementById('btn').appendChild(close);
+
+  }
+
+    function startDrag(e) {
+            if (!e) {
+                var e = window.event;
+            }
+            if(e.preventDefault) e.preventDefault();
+            targ = e.target ? e.target : e.srcElement;
+
+            if (targ.className != 'dragme') {return};
+
+                offsetX = e.clientX;
+                offsetY = e.clientY;
+
+            if(!targ.style.left) { targ.style.left='0px'};
+            if (!targ.style.top) { targ.style.top='0px'};
+
+            coordX = parseInt(targ.style.left);
+            coordY = parseInt(targ.style.top);
+            drag = true;
+
+                document.onmousemove=dragDiv;
+            return false;
+        }
+
+        function dragDiv(e) {
+            if (!drag) {return};
+            if (!e) { var e= window.event};
+            targ.style.left=coordX+e.clientX-offsetX+'px';
+            targ.style.top=coordY+e.clientY-offsetY+'px';
+            return false;
+        }
+
+        function stopDrag() {
+            drag=false;
+        }
+
+        window.onload = function() {
+            document.onmousedown = startDrag;
+            document.onmouseup = stopDrag;
+        }
+
+        document.getElementById("bioW").onclick = function() {
+
+        }
+
+    </script>
+
+  </body>
+  </html>
