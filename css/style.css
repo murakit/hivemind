@@ -58,14 +58,14 @@ body {
 #footer{
     border-radius: 25px;
     background-color: #422fe9;
-    height:6%;
+    height:5%;
   }
 
 #bio {
   font-family: 'VT323', monospace;
-  margin-top: 1px;
+  margin-top: -10px;
   margin-left: 2%;
-  font-size: 25px;
+  font-size: 20px;
   color: blue;
   background: none;
   border-radius: 25px;
@@ -80,7 +80,7 @@ body {
   font-family: 'VT323', monospace;
   margin-top: 1px;
   margin-left: 2%;
-  font-size: 25px;
+  font-size: 20px;
   color: blue;
   background: none;
   border-radius: 25px;
@@ -102,6 +102,7 @@ body {
   font-size: 25px;
   color: blue;
 }
+
 
 #closebtn {
   border-radius: 25px;

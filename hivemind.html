@@ -48,7 +48,7 @@
         </div>
 
         <div id="draggable" class="dragme">
-          <img id="imagen" src="img/team.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
+          <img id="imagenteam" src="img/team.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
         </div>
 
       </div>
@@ -63,6 +63,8 @@
 
     <script type="text/javascript">
 
+    var counter = 99;
+
      var audio = new Audio('radio/song.mp3');
 
       document.getElementById("previewplay").onclick = function() {
@@ -74,32 +76,82 @@
       }
 
       document.getElementById("imagen1").ondblclick = function() {
-        var div = document.createElement("div");
-        div.id="btn";
-        div.style.width = "40%";
-        div.style.height = "40%";
-        div.className = "dragme";
-        div.style.background = "white";
-        div.style.borderRadius = "25px";
-        div.style.border = "solid blue";
-        div.style.color = "blue";
-        div.innerHTML = "&nbsp&nbspRadio";
-        div.style.margin = "20%";
-        div.style.zIndex = "99";
-        div.style.position = "fixed";
-        document.getElementById('radio').appendChild(div);
+        if (!document.getElementById('btn')){
+          var div = document.createElement("div");
+          div.id="btn";
+          div.style.width = "40%";
+          div.style.height = "40%";
+          div.className = "dragme";
+          div.style.background = "white";
+          div.style.borderRadius = "25px";
+          div.style.border = "solid blue";
+          div.style.color = "blue";
+          div.innerHTML = "&nbsp&nbspRadio";
+          div.style.margin = "20%";
+          div.style.zIndex = ++counter;
+          div.style.position = "fixed";
+          document.getElementById('radio').appendChild(div);
 
-        var close = document.createElement("button");
-        close.type = "button";
-        close.id="closebtn";
-        close.textContent = "X";
-        close.onclick = function () {
-          document.getElementById("btn").remove();
-          document.getElementById("closebtn").remove();
-        }
-        document.getElementById('btn').appendChild(close);
+          document.getElementById("btn").onclick = function() {
+            btn.style.zIndex = ++counter;
+          }
 
+          var close = document.createElement("button");
+          close.type = "button";
+          close.id="closebtn";
+          close.textContent = "X";
+          close.onclick = function () {
+            document.getElementById("btn").remove();
+            //document.getElementById("closebtn").remove();
+          }
+          document.getElementById('btn').appendChild(close);
+
+
+    }
+    else {
+
+    }
   }
+
+      document.getElementById("imagen").ondblclick = function() {
+        if (!document.getElementById('btn2')){
+          var div = document.createElement("div");
+          div.id="btn2";
+          div.style.width = "40%";
+          div.style.height = "40%";
+          div.className = "dragme";
+          div.style.background = "white";
+          div.style.borderRadius = "25px";
+          div.style.border = "solid blue";
+          div.style.color = "blue";
+          div.innerHTML = "&nbsp&nbspWorld";
+          div.style.margin = "20%";
+          div.style.zIndex = ++counter;
+          div.style.position = "fixed";
+          document.getElementById('radio').appendChild(div);
+
+          document.getElementById("btn2").onclick = function() {
+            btn2.style.zIndex = ++counter;
+          }
+
+          var close = document.createElement("button");
+          close.type = "button";
+          close.id="closebtn2";
+          close.textContent = "X";
+          close.onclick = function () {
+            document.getElementById("btn2").remove();
+            //document.getElementById("closebtn2").remove();
+          }
+          document.getElementById('btn2').appendChild(close);
+      }
+
+      else {
+
+      }
+
+
+
+    }
 
     function startDrag(e) {
             if (!e) {
