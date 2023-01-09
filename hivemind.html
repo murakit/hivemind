@@ -40,11 +40,11 @@
 
       <div class="col-sm-2">
         <div id="draggable" class="dragme">
-          <img id="imagen1" src="img/radiofolder02.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
+          <img id="imagen1" src="img/folder01.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
         </div>
 
         <div id="draggable" class="dragme">
-          <img id="imagen" src="img/folder01.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
+          <img id="imagen" src="img/radiofolder02.jpg" width="70%" alt="drag-and-drop image script" class="dragme">
         </div>
 
         <div id="draggable" class="dragme">
@@ -61,143 +61,12 @@
 
     </div>
 
-    <script type="text/javascript">
+    <script src="js/lib/jquery-3.2.1.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/lib/three/GLTFLoader.js"></script>
+    <script src="js/lib/OrbitControls.js"></script>
+    <script src="js/index.js"></script>
 
-    var counter = 99;
-
-     var audio = new Audio('radio/song.mp3');
-
-      document.getElementById("previewplay").onclick = function() {
-        audio.play();
-      }
-
-      document.getElementById("previewpause").onclick = function() {
-        audio.pause();
-      }
-
-      document.getElementById("imagen1").ondblclick = function() {
-        if (!document.getElementById('btn')){
-          var div = document.createElement("div");
-          div.id="btn";
-          div.style.width = "40%";
-          div.style.height = "40%";
-          div.className = "dragme";
-          div.style.background = "white";
-          div.style.borderRadius = "25px";
-          div.style.border = "solid blue";
-          div.style.color = "blue";
-          div.innerHTML = "&nbsp&nbspRadio";
-          div.style.margin = "20%";
-          div.style.zIndex = ++counter;
-          div.style.position = "fixed";
-          document.getElementById('radio').appendChild(div);
-
-          document.getElementById("btn").onclick = function() {
-            btn.style.zIndex = ++counter;
-          }
-
-          var close = document.createElement("button");
-          close.type = "button";
-          close.id="closebtn";
-          close.textContent = "X";
-          close.onclick = function () {
-            document.getElementById("btn").remove();
-            //document.getElementById("closebtn").remove();
-          }
-          document.getElementById('btn').appendChild(close);
-
-
-    }
-    else {
-
-    }
-  }
-
-      document.getElementById("imagen").ondblclick = function() {
-        if (!document.getElementById('btn2')){
-          var div = document.createElement("div");
-          div.id="btn2";
-          div.style.width = "40%";
-          div.style.height = "40%";
-          div.className = "dragme";
-          div.style.background = "white";
-          div.style.borderRadius = "25px";
-          div.style.border = "solid blue";
-          div.style.color = "blue";
-          div.innerHTML = "&nbsp&nbspWorld";
-          div.style.margin = "20%";
-          div.style.zIndex = ++counter;
-          div.style.position = "fixed";
-          document.getElementById('radio').appendChild(div);
-
-          document.getElementById("btn2").onclick = function() {
-            btn2.style.zIndex = ++counter;
-          }
-
-          var close = document.createElement("button");
-          close.type = "button";
-          close.id="closebtn2";
-          close.textContent = "X";
-          close.onclick = function () {
-            document.getElementById("btn2").remove();
-            //document.getElementById("closebtn2").remove();
-          }
-          document.getElementById('btn2').appendChild(close);
-      }
-
-      else {
-
-      }
-
-
-
-    }
-
-    function startDrag(e) {
-            if (!e) {
-                var e = window.event;
-            }
-            if(e.preventDefault) e.preventDefault();
-            targ = e.target ? e.target : e.srcElement;
-
-            if (targ.className != 'dragme') {return};
-
-                offsetX = e.clientX;
-                offsetY = e.clientY;
-
-            if(!targ.style.left) { targ.style.left='0px'};
-            if (!targ.style.top) { targ.style.top='0px'};
-
-            coordX = parseInt(targ.style.left);
-            coordY = parseInt(targ.style.top);
-            drag = true;
-
-                document.onmousemove=dragDiv;
-            return false;
-        }
-
-        function dragDiv(e) {
-            if (!drag) {return};
-            if (!e) { var e= window.event};
-            targ.style.left=coordX+e.clientX-offsetX+'px';
-            targ.style.top=coordY+e.clientY-offsetY+'px';
-            return false;
-        }
-
-        function stopDrag() {
-            drag=false;
-        }
-
-        window.onload = function() {
-            document.onmousedown = startDrag;
-            document.onmouseup = stopDrag;
-        }
-
-        document.getElementById("bioW").onclick = function() {
-
-        }
-
-    </script>
-
+    
   </body>
   </html>
