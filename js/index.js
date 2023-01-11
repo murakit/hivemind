@@ -3,15 +3,6 @@
 var counter = 99;
 var audio = new Audio('radio/song.mp3');
 
-
- document.getElementById("previewplay").onclick = function() {
-   audio.play();
- }
-
- document.getElementById("previewpause").onclick = function() {
-   audio.pause();
- }
-
  document.getElementById("imagen1").ondblclick = function() {
    if (!document.getElementById('btn')){
 
