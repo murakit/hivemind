@@ -3,8 +3,7 @@
 var counter = 99;
 var audio = new Audio('radio/song.mp3');
 
-<<<<<<< HEAD
-=======
+
  document.getElementById("previewplay").onclick = function() {
    audio.play();
  }
@@ -12,7 +11,6 @@ var audio = new Audio('radio/song.mp3');
  document.getElementById("previewpause").onclick = function() {
    audio.pause();
  }
->>>>>>> bdedbfcab55d7917990b2e6e8931909ef7652f69
 
  document.getElementById("imagen1").ondblclick = function() {
    if (!document.getElementById('btn')){
@@ -61,7 +59,6 @@ else {
 }
 
 
-<<<<<<< HEAD
 if (!document.getElementById('btn3')){
 
     var close = document.createElement("button");
@@ -110,9 +107,6 @@ if (!document.getElementById('btn3')){
     
     btn3.style.zIndex = ++counter;
 
-
-=======
->>>>>>> bdedbfcab55d7917990b2e6e8931909ef7652f69
 
  document.getElementById("imagen").ondblclick = function() {
    if (!document.getElementById('btn3')){
