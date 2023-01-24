@@ -81,15 +81,7 @@ a {
 
 #footer{
     background-color: #422fe9;
-<<<<<<< HEAD
     height:4.6%;
-=======
-<<<<<<< HEAD
-    height:4.6%;
-=======
-    height:5%;
->>>>>>> bdedbfcab55d7917990b2e6e8931909ef7652f69
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
 }
 
 #bio {
@@ -129,7 +121,6 @@ a {
 }
 
 
-<<<<<<< HEAD
 #player {
   position: fixed;
   width: 25%;
@@ -154,7 +145,7 @@ a {
 
 #info {
   position:fixed;
-  margin-left: 75%;
+  margin-left: 70%;
   margin-top: 5%;
   z-index: 999;
   font-family: 'VT323', monospace;
@@ -162,8 +153,6 @@ a {
   color: white;
 }
 
-=======
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
 
 #btn {
   font-family: 'VT323', monospace;
@@ -181,10 +170,6 @@ a {
 #closebtn {
   margin-left: 85%;
   margin-top: -12%;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
 }
 
 #closebtn2 {
@@ -225,13 +210,6 @@ a {
 }
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
 @media screen and (min-width: 1125px) {
 #bio {
   font-family: 'VT323', monospace;
@@ -357,7 +335,6 @@ a {
     outline: inherit;
   }
 
-<<<<<<< HEAD
 }
 
 @media screen and (min-width: 2100px) {
@@ -392,88 +369,3 @@ a {
 
 }
 
-=======
-}
-
-@media screen and (min-width: 2100px) {
-  #bio {
-    font-family: 'VT323', monospace;
-    margin-top: 0.1%;
-    margin-left: 2%;
-    font-size: 34px;
-    color: blue;
-    background: none;
-    border-radius: 25px;
-    border: solid blue;
-    background-color: white;
-    cursor: pointer;
-    outline: inherit;
-  }
-  
-  #bioW {
-    font-family: 'VT323', monospace;
-    margin-top: -1%;
-    margin-left: 2%;
-    font-size: 34px;
-    color: blue;
-    background: none;
-    border-radius: 25px;
-    border: solid blue;
-    background-color: white;
-    padding: 0;
-    cursor: pointer;
-    outline: inherit;
-  }
-
-}
-
-=======
-}
-
-#closebtn2 {
-  margin-left: 5%;
-  margin-top: -100px;
-}
-
-#closebtn3 {
-  margin-left: 85%;
-  margin-top: -12%;
-}
-
-
-@media screen and (min-width: 1300px) {
-  #bio {
-    font-family: 'VT323', monospace;
-    margin-top: 1px;
-    margin-left: 2%;
-    font-size: 26px;
-    color: blue;
-    background: none;
-    border-radius: 25px;
-    border: solid blue;
-    background-color: white;
-    padding: 0;
-    cursor: pointer;
-    outline: inherit;
-  }
-  
-  #bioW {
-    font-family: 'VT323', monospace;
-    margin-top: 1px;
-    margin-left: 2%;
-    font-size: 26px;
-    color: blue;
-    background: none;
-    border-radius: 25px;
-    border: solid blue;
-    background-color: white;
-    padding: 0;
-    cursor: pointer;
-    outline: inherit;
-  }
-  
-
-
-}
->>>>>>> bdedbfcab55d7917990b2e6e8931909ef7652f69
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
