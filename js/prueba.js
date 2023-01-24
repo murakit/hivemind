@@ -37,11 +37,10 @@ function setupWorld() {
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     //renderer.setSize(window.innerHeight,window.innerWidth);
 
-<<<<<<< HEAD
     //document.body.appendChild(renderer.domElement);
-=======
+
     document.body.appendChild(renderer.domElement);
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
+
     renderer.setPixelRatio(window.devicePixelRatio);
     element = renderer.domElement;
     $container.append(element);
@@ -57,11 +56,11 @@ function setupWorld() {
     controls.target.set(0, 0, 0);
     controls.update();
 
-<<<<<<< HEAD
+
     /*document.body.appendChild(renderer.domElement);
-=======
+
     document.body.appendChild(renderer.domElement);
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
+
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerHeight,window.innerWidth);
 
@@ -74,7 +73,6 @@ function setupWorld() {
     var height = $container.height();
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-<<<<<<< HEAD
     renderer.setSize(width, height);*/
 
     var width  = $container.width();
@@ -99,14 +97,14 @@ function setupWorld() {
         renderer.setSize($container.width(), $container.height());
     }
     
-=======
+
     renderer.setSize(width, height);
 
 
     renderer.setPixelRatio(window.devicePixelRatio);
     element = renderer.domElement;
     $container.append(element);
->>>>>>> 64aa3010caa649c7160dd7f492d778c5b2eef318
+
 
     var Hlight = new THREE.SpotLight( 0X5dc1b9 , 1  ); // soft white light
     Hlight.position.y=60;
