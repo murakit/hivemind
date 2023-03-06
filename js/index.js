@@ -1,310 +1,91 @@
-
-
 var counter = 99;
-var audio = new Audio('radio/song.mp3');
 
-document.getElementById("play").onclick = function() {
-    audio.play();
-    document.getElementById("info").innerHTML = "Author" + "<br>" + "- Song";
-}
-
-document.getElementById("pause").onclick = function() {
-    audio.pause();
-}
-
- document.getElementById("imagen1").ondblclick = function() {
-   if (!document.getElementById('btn')){
+document.getElementById("inicio").onclick = function() {
+  if (!document.getElementById('menu')){
 
     var close = document.createElement("button");
     close.type = "button";
     close.id="closebtn";
-    close.style.width = "8%";
-    close.style.height = "8%";
+    close.style.width = "6%";
+    close.style.height = "6%";
+    close.style.margin = "2.3%";
     close.style.fontSize = "15px";
-    close.style.borderRadius = "25px";
+    close.style.border = "none";
+    close.style.borderRadius = "26px";
+    close.style.background= "none";
     close.textContent = "X";
     close.onclick = function () {
-      document.getElementById("btn").remove();
-      //document.getElementById("closebtn").remove();
+      document.getElementById("closebtn").remove();
+      document.getElementById("menu").remove();
     }
 
-     var div = document.createElement("div");
-     div.id="btn";
-     div.style.width = "20%";
-     div.style.height = "40%";
-     div.className = "dragme";
-     div.style.background = "white";
-     div.style.border = "solid blue";
-     div.style.borderRadius = "25px";
-     div.style.color = "blue";
-     div.style.margin = "10%";
-     //div.style.zIndex = ++counter;
-     div.style.zIndex = 99;
-     div.style.position = "fixed";
-     document.getElementById('radio').appendChild(div);
-     document.getElementById('btn').appendChild(close);
 
-     logoWorld();
-     document.getElementById("btn").onclick = function() {
-       btn.style.zIndex = ++counter;
-     }
-
-
-}
-
-else {
-}
-    btn.style.zIndex = ++counter;
-
-}
-
-document.getElementById("imagenteam").ondblclick = function() {
-    if (!document.getElementById('btn2')){
-
-    var close = document.createElement("button");
-    close.type = "button";
-    close.id="closebtn2";
-    close.style.width = "3%";
-    close.style.height = "5%";
-    close.style.fontSize = "15px";
-    close.style.borderRadius = "25px";
-    close.textContent = "X";
-    close.style.position = "fixed";
-    close.onclick = function () {
-    document.getElementById("btn2").remove();
-       //document.getElementById("closebtn2").remove();
+    var oImg = document.createElement("img");
+    oImg.setAttribute('src', 'img/454.png');
+    oImg.setAttribute('alt', 'na');
+    oImg.style.width = '7%';
+    oImg.style.marginLeft = '-1%';
+    oImg.style.marginTop = '1%';
+    oImg.style.position = 'fixed';
+    oImg.onclick = function () {
+      window.location.replace("radio.html");
     }
 
-      var div = document.createElement("div");
-      div.id="btn2";
-      div.style.width = "30%";
-      div.style.height = "45%";
-      div.className = "dragme";
-      div.innerHTML =  "<b>" + "&nbsp&nbspCreative Direction:" + '<br>' + "&nbsp&nbspNickelly Garbaje"  + '<br>' + "&nbsp&nbsplAU"+ '<br>' + "&nbsp&nbspAndi García" + "&nbsp&nbspDenu" + '<br>' + "&nbsp&nbspMurakit"+ '<br>' ;
-      div.style.background = "white";
-      div.style.borderRadius = "25px";
-      div.style.border = "solid blue";
-      div.style.color = "blue";
-      div.style.margin = "22%";
-      div.style.zIndex = 99;
-      div.style.position = "fixed";
+    var oImg2 = document.createElement("img");
+    oImg2.setAttribute('src', 'img/231.png');
+    oImg2.setAttribute('alt', 'na');
+    oImg2.style.width = '7%';
+    oImg2.style.marginLeft = '7.3%';
+    oImg2.style.marginTop = '1%';
+    oImg2.style.position = 'fixed';
+    oImg2.onclick = function () {
+      window.location.replace("metaverse.html");
+    }
+
+    var oImg3 = document.createElement("img");
+    oImg3.setAttribute('src', 'img/244.png');
+    oImg3.setAttribute('alt', 'na');
+    oImg3.style.width = '7%';
+    oImg3.style.marginLeft = '16%';
+    oImg3.style.marginTop = '1%';
+    oImg3.style.position = 'fixed';
+    oImg3.onclick = function () {
+      window.location.replace("artists.html");
+    }
 
 
-      document.getElementById('radio').appendChild(div);
-      document.getElementById('btn2').appendChild(close);
-      
-      document.getElementById("btn2").onclick = function() {
-        btn2.style.zIndex = ++counter;
-      }
-  }
+    var div = document.createElement("div");
+    div.id="menu";
+    div.style.width = "27%";
+    div.style.height = "40%";
+    div.style.background = "#C8E2E7";
+    div.style.border = "solid white 2px";
+    div.style.borderRadius = "26px";
+    div.style.color = "blue";
+    div.style.margin = "3.6%";
+    div.style.opacity = "60%";
+    div.style.marginLeft = "1%";
+    div.style.bottom= "0";
+    //div.style.zIndex = ++counter;
+    div.style.zIndex = 99;
+    div.style.position = "fixed";
+    
+
+    document.getElementById('interfaz').appendChild(div);
+    document.getElementById('menu').appendChild(close);
+    document.getElementById("menu").appendChild(oImg);
+    document.getElementById("menu").appendChild(oImg2);
+    document.getElementById("menu").appendChild(oImg3);
+
+
+    /*document.getElementById("btn").onclick = function() {
+      closebtn.style.zIndex = ++counter;
+    }*/
+
+}
+
   else {
- 
   }
+    closebtn.style.zIndex = ++counter;
 
-  btn2.style.zIndex = ++counter;
-
- }
-
-function startDrag(e) {
-       if (!e) {
-           var e = window.event;
-       }
-       if(e.preventDefault) e.preventDefault();
-       targ = e.target ? e.target : e.srcElement;
-
-       if (targ.className != 'dragme') {return};
-
-           offsetX = e.clientX;
-           offsetY = e.clientY;
-
-       if(!targ.style.left) { targ.style.left='0px'};
-       if (!targ.style.top) { targ.style.top='0px'};
-
-       coordX = parseInt(targ.style.left);
-       coordY = parseInt(targ.style.top);
-       drag = true;
-
-           document.onmousemove=dragDiv;
-       return false;
-   }
-
-   function dragDiv(e) {
-       if (!drag) {return};
-       if (!e) { var e= window.event};
-       targ.style.left=coordX+e.clientX-offsetX+'px';
-       targ.style.top=coordY+e.clientY-offsetY+'px';
-       return false;
-   }
-
-   function stopDrag() {
-       drag=false;
-   }
-
-   window.onload = function() {
-       document.onmousedown = startDrag;
-       document.onmouseup = stopDrag;
-   }
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////WALLET
-
-   document.getElementById("bioW").onclick = function() {
-
-   }
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////3D WORLD
-
-   function logoWorld() {
-    
-    var scene, renderer;
-    var camera;
-    var controls;
-    var mixer;
-    var clock = new THREE.Clock();
-
-    setUp();
-
-    function setUp() {
-        setupWorld();
-        animate(); 
-    }
-
-    function setupWorld() {
-        clock = new THREE.Clock();
-        $container = $('#btn');
-        scene = new THREE.Scene();
-        //scene.background = new THREE.Color('#808080');
-        scene.background = new THREE.CubeTextureLoader()
-        .setPath( 'cubemap/' )
-        .load( [
-    
-           'bluecloud_ft.png',
-            'bluecloud_bk.png',
-            'bluecloud_up.png', 
-            'bluecloud_dn.png',
-            'bluecloud_rt.png',
-            'bluecloud_lf.png'
-        ] );
-    
-        camera = new THREE.PerspectiveCamera(120, 1, 0.001, 10000);
-        //camera.target = new THREE.Vector3(0, 500, 200);
-        camera.position.set( 0.47, -0.2, 6);
-        //camera.position.set(0,0,0);
-        scene.add(camera);
-
-        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        //renderer.setSize(window.innerHeight,window.innerWidth);
-
-        document.body.appendChild(renderer.domElement);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        element = renderer.domElement;
-        $container.append(element);
-
-
-        controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.autoRotate = true;
-        controls.maxZoom = 0.9;
-        controls.rotateSpeed = 2;
-        controls.zoomSpeed = 0.2;
-        controls.panSpeed = 0.8;
-
-        controls.target.set(0, 0, 0);
-        controls.update();
-
-        var width  = $container.width();
-        var height = $container.height();
-    
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-    
-        renderer.setSize($container.width(), $container.height()- 55);
-    
-    
-        $(window).on('resize', resize);
-    
-    
-        function resize() {
-            var width  = $container.width();
-            var height = $container.height();
-        
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-        
-            renderer.setSize($container.width(), $container.height()- 55);
-        }
-
-        renderer.setPixelRatio(window.devicePixelRatio);
-        element = renderer.domElement;
-        $container.append(element);
-
-        var Hlight = new THREE.SpotLight( 0X5dc1b9 , 1  ); // soft white light
-        Hlight.position.y=60;
-        Hlight.position.z=-10;
-        Hlight.position.x=10;
-
-        scene.add( Hlight ); 
-
-        var Hlight = new THREE.HemisphereLight( 0X5dc1b9 , 0X5dc1b9 , 1  ); // soft white light
-        Hlight.position.y=5;
-        Hlight.position.z=2;
-        Hlight.position.x=1;
-
-        scene.add( Hlight ); 
-
-        const manager = new THREE.LoadingManager();
-        manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
-                console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
-            };
-            manager.onLoad = function ( ) {
-                console.log( 'Loading complete!');
-            };
-            manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-                console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
-            };
-
-            manager.onError = function ( url ) {
-                console.log( 'There was an error loading ' + url );
-            };
-
- 
-
-        var loader = new THREE.GLTFLoader(manager);
-            loader.load('glb/untitled.glb', function ( gltf ) {
-            // const tloader = new THREE.TextureLoader();
-                //tloader.load("img/pl07_skin.png", function(tloader){
-                    gltf.scene.traverse( function ( child ) {
-                        if ( child.isMesh ) {
-                        child.material.needsUpdate = true;
-                        child.material.flipY = false;
-                        }
-
-                    });
-            // });
-                gltf.scene.traverse( function( object ) {
-                    object.frustumCulled = false;
-                } );
-                scene.add( gltf.scene );
-
-            },
-            function ( xhr ) {
-                console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-            },
-            function ( error ) {
-                console.log( 'An error happened' );
-            }
-        );
-
-    }
-        function animate() {
-            requestAnimationFrame( animate );
-            var delta = clock.getDelta();
-            if (mixer) {
-                mixer.update(delta);
-            }
-            renderer.render( scene, camera );
-            controls.update();
-
-        }
-    }
-
+}
