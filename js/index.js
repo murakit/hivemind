@@ -28,7 +28,7 @@ document.getElementById("inicio").onclick = function() {
     oImg.style.marginTop = '1%';
     oImg.style.position = 'fixed';
     oImg.onclick = function () {
-      window.location.replace("radio.html");
+      window.open("radio.html");
     }
 
     var oImg2 = document.createElement("img");
@@ -39,7 +39,7 @@ document.getElementById("inicio").onclick = function() {
     oImg2.style.marginTop = '1%';
     oImg2.style.position = 'fixed';
     oImg2.onclick = function () {
-      window.location.replace("metaverse.html");
+      window.open("metaverse.html");
     }
 
     var oImg3 = document.createElement("img");
@@ -50,7 +50,7 @@ document.getElementById("inicio").onclick = function() {
     oImg3.style.marginTop = '1%';
     oImg3.style.position = 'fixed';
     oImg3.onclick = function () {
-      window.location.replace("artists.html");
+      window.open("artists.html");
     }
 
 
